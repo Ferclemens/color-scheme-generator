@@ -6,6 +6,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 .color-select {
     display: flex;
@@ -17,23 +18,27 @@ body {
 }
 .color-input {
     border: none;
-    border-radius: 3px;
+    border-radius: 4px;
     height: 42px;
-    width: 51px;
+    width: 60px;
 }
 .group-select {
     width: 312px;
     height: 42px;
+    border-radius: 4px;
 }
 .select-btn {
     width: 113px;
     height: 42px;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .color-show {
     flex-grow: 8;
     background-color: #282828;
     display: flex;
-
 }
 .color-box {
     flex-grow: 1;
@@ -43,7 +48,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 3rem;
+    height: 2rem;
     flex-grow: 1;
     background-color: #FFFFFF;
 }
@@ -51,9 +56,44 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: end;
     padding: 0 1rem;
     height: 2rem;
     flex-grow: 0;
     background-color: #FFFFFF;
+    font-size: small;
+}
+.footer a {
+    text-decoration: none;
 }
 
+@media screen and (max-width: 580px) {
+    .color-select {
+        flex-direction: column;
+    }
+    .color-input {
+        width: 89%;
+    }
+    .group-select {
+        width: 89%;
+    }
+    .select-btn {
+        width: 89%;
+    }
+    .color-show {
+        flex-direction: column;
+        width: 75%;
+    }
+    .color-hex {
+        flex-direction: column;
+        position: absolute;
+        right: 5%;
+        top: 62%;
+        gap: 15px;
+    }
+}
+@media screen and (max-width: 340px) {
+    .color-show {
+        width: 65%;
+    }
+}
