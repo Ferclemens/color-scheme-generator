@@ -1,16 +1,24 @@
 //elements
 const colorShowEl = document.getElementById('color-show')
 const colorHexEl = document.getElementById('color-hex')
+const colorInputEl = document.getElementById('color-input')
+const selectBtnEl = document.getElementById('select-btn')
+
+//Listeners
+selectBtnEl.addEventListener('click', function(){
+    getColorScheme(selectColor())
+})
 
 //get color scheme from url
-function getColor(){
-    fetch("https://www.thecolorapi.com/scheme?hex=0047AB&rgb=0,71,171&hsl=215,100%,34%&cmyk=100,58,0,33&format=json&mode=analogic&count=6")
+function getColorScheme(hex = '0047AB'){
+    fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&format=json&mode=analogic&count=6`)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        //console.log(data);
         showSchema(data)
     })
 }
+//show color-scheme and hex code in UI
 function showSchema(colorData) {
     let colorBox = ''
     let colorHex = ''
@@ -28,4 +36,12 @@ function showSchema(colorData) {
     colorHexEl.innerHTML = colorHex
 }
 
-getColor()
+// get input color value (hex formated)
+function selectColor() {
+    const color = colorInputEl.value
+    const formatColor = color.slice(1)
+    console.log(formatColor);
+    return formatColor
+}
+
+getColorScheme()
