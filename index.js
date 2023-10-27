@@ -16,7 +16,7 @@ function getColorScheme(hex = '0047AB', mode = 'analogic'){
     fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&format=json&mode=${mode}&count=6`)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        //console.log(data);
         showSchema(data)
         
     })
