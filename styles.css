@@ -88,12 +88,20 @@ body {
         flex-direction: column;
         position: absolute;
         right: 5%;
-        top: 62%;
-        gap: 15px;
+        top: 34%;
+        height: 60%;
+        margin: 0;
+        gap: 13px;
+        justify-content: stretch;
     }
 }
 @media screen and (max-width: 340px) {
     .color-show {
         width: 65%;
+    }
+}
+@media screen and (max-width: 225px) {
+    .color-show {
+        width: 55%;
     }
 }
