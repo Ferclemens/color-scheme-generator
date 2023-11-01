@@ -8,6 +8,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
+    color: #b1b5ba;
+    background-color: #1f1f1f;
 }
 
 .color-select {
@@ -15,7 +17,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    background-color: #FFFFFF;
 }
 .inputs {
     display: flex;
@@ -61,7 +62,6 @@ body {
     justify-content: space-between;
 }
 .color-show {
-    background-color: #282828;
     display: flex;
     height: 400px;
 }
@@ -73,7 +73,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #FFFFFF;
     padding: 0 0 25px 0;
 }
 .color-hex p {
@@ -86,7 +85,6 @@ body {
     justify-content: end;
     padding: 0.3rem 2rem;
     height: 2rem;
-    background-color: #FFFFFF;
     font-size: small;
 }
 .footer a {
